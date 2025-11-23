@@ -20,14 +20,16 @@ The goal is to create a risk of rain-like game. Details have not yet been define
 *
 
 #### Calvin Rull
-*
-*
+* Character Assets & Animations
+* 
 *
 
 #### Diego Vasquez-Del-Mercado
 *
 *
 *
+
+## Link to Video
 
 
 
