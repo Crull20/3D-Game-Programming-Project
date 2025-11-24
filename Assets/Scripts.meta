@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b3db329b9ddfabe4db921d644faf225c
+=======
+guid: ac1ab8b411eee514f98cf0a940c4016d
+>>>>>>> Billboarding
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
