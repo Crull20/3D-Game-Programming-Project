@@ -25,9 +25,9 @@ The goal is to create a risk of rain-like game. Details have not yet been define
 * Enemy Assets and Attacks
 
 #### Diego Vasquez-Del-Mercado
-*
-*
-*
+* World Map Design
+* Environment, Foliage, Props
+* Sound Design
 
 ## Link to Video
 
