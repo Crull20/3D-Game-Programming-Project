@@ -30,7 +30,11 @@ The goal is to create a risk of rain-like game. Details have not yet been define
 * Sound Design
 
 ## Link to Video
+The first video shows our progress so far with creating a playable character in a 3D environment and having camera physics that follow the player. 
+The second video is the progress of our map and environment including foliage like trees. 
 
+### https://www.youtube.com/watch?v=8M6zP0BTTic
+### https://www.youtube.com/watch?v=zQPyckKdsP0
 
 
 
