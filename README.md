@@ -1,5 +1,5 @@
 # 3D-Game-Programming-Project
-CS 583 3D Game Programming Project
+San Diego State University CS 583 3D Game Programming Project Group "clock12"
 
 ## PREY
 In the game "PREY" you play as a lone rabbit escaping harsh woodland forests whilst fighting different predators along the way. 
