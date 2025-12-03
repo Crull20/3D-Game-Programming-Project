@@ -23,22 +23,24 @@ public class PlayerMovement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         inputDir = new Vector3(h, 0f, v).normalized;
-
-        Vector3 camForward = cam.forward;
-        camForward.y = 0f;
-        if (camForward.sqrMagnitude > 0.01f) {
-            Quaternion targetRot = Quaternion.LookRotation(camForward);
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                targetRot,
-                rotationSpeed * Time.deltaTime
-            );
-        }
     }
 
     void FixedUpdate()
     {
-        Vector3 worldMove = transform.TransformDirection(inputDir) * moveSpeed;
+        if (cam == null && Camera.main != null)
+            cam = Camera.main.transform;
+
+        if (cam == null) return;
+
+        // Move relative to camera orientation directly
+        Vector3 camForward = cam.forward;
+        Vector3 camRight = cam.right;
+        camForward.y = 0f;
+        camRight.y = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        Vector3 worldMove = (camForward * inputDir.z + camRight * inputDir.x) * moveSpeed;
         worldMove.y = rb.velocity.y;
         rb.velocity = worldMove;
     }
