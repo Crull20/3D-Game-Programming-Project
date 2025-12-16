@@ -93,7 +93,7 @@ public class SpriteDirectionAnimator : MonoBehaviour
             case Facing.Front: return moving ? "WalkFront" : "IdleFront";
             case Facing.Back: return moving ? "WalkBack" : "IdleBack";
             case Facing.Left: return moving ? "WalkLeft" : "IdleLeft";
-            case Facing.Right: return moving ? "WalkRight" : "IdleRiht";
+            case Facing.Right: return moving ? "WalkRight" : "IdleRight";
         }
 
         // fallback
