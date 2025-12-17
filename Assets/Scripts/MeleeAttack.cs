@@ -4,63 +4,69 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-    // empty transforms in front of player
     public Transform attackPoint;
-    public Animator animator;
 
     [Header("Attack Settings")]
-    // size of hit area
     public float attackRadius = 1.2f;
-    // how far in front hit center is
     public float attackRangeForward = 1.2f;
     public int damage = 25;
     public float attackCooldown = 0.4f;
 
+    [Header("VFX")]
+    public GameObject slashVfxPrefab;
+
+    [Header("VFX Placement")]
+    public float forwardOffset = 1.2f;
+
     public LayerMask enemyLayers;
 
     private bool canAttack = true;
+    private bool flipNext;
 
-    // prevent double hits in one swing if calling DoDamage multiple times
     private readonly HashSet<Collider> hitThisSwing = new HashSet<Collider>();
-
-    void Reset()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
 
     void Update()
     {
-        // Left Mouse input
         if (canAttack && Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(AttackRoutine());
+            flipNext = !flipNext;
+            StartCoroutine(AttackRoutine(flipNext));
         }
     }
 
-    IEnumerator AttackRoutine()
+    IEnumerator AttackRoutine(bool flipX)
     {
         canAttack = false;
         hitThisSwing.Clear();
 
-        // play animation
-        if (animator != null)
-        {
-            animator.SetTrigger("Attack");
-        }
+        SpawnSlash(flipX);
 
         yield return new WaitForSeconds(0.15f);
         DoDamage();
+
+        yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }
 
-    // call from animation event at impact frame
+    void SpawnSlash(bool flipX)
+    {
+        if (slashVfxPrefab == null || attackPoint == null) return;
+
+        Vector3 pos = attackPoint.position + attackPoint.forward * forwardOffset;
+        Quaternion rot = Quaternion.LookRotation(attackPoint.forward, Vector3.up)
+                        * Quaternion.Euler(75f, 0f, 0f);
+
+        GameObject slash = Instantiate(slashVfxPrefab, pos, rot);
+
+        var sr = slash.GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) sr.flipX = flipX;
+    }
+
     public void DoDamage()
     {
         if (attackPoint == null) return;
 
-        // center of hit area in front of player
         Vector3 center = attackPoint.position + attackPoint.forward * attackRangeForward;
-
         Collider[] hits = Physics.OverlapSphere(center, attackRadius, enemyLayers, QueryTriggerInteraction.Ignore);
 
         foreach (Collider c in hits)
@@ -68,25 +74,12 @@ public class MeleeAttack : MonoBehaviour
             if (hitThisSwing.Contains(c)) continue;
             hitThisSwing.Add(c);
 
-            // generic damage interface first
             IDamageable dmg = c.GetComponentInParent<IDamageable>();
-            if (dmg != null)
-            {
-                dmg.TakeDamage(damage);
-                continue;
-            }
-
-            // or fall back to simple EnemyHealth component:
-            /*
-            EnemyHealth hp = c.GetComponentInParent<EnemyHealth>();
-            if (hp != null)
-            {
-                hp.TakeDamage(damage);
-            }*/
+            if (dmg != null) dmg.TakeDamage(damage);
         }
     }
 
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
         Vector3 center = attackPoint.position + attackPoint.forward * attackRangeForward;
@@ -94,7 +87,6 @@ public class MeleeAttack : MonoBehaviour
     }
 }
 
-// simple interface
 public interface IDamageable
 {
     void TakeDamage(int amount);
