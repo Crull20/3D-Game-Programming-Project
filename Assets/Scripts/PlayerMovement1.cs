@@ -8,17 +8,22 @@ public class PlayerMovement1 : MonoBehaviour
     public float rotationSpeed = 15f;
     public float sprintMultiplier = 1.5f;
 
-    public float jumpForce = 5f;
     public float groundCheckDistance = 1.1f;
     public LayerMask groundMask;
-
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
 
     Rigidbody rb;
     Transform cam;
     Vector3 inputDir;
-    private bool jumpRequested;
+
+    [Header("Dash")]
+    public float dashSpeed = 18f;
+    public float dashDuration = 0.12f;
+    public float dashCooldown = 0.6f;
+
+    private bool isDashing;
+    private float dashTimeLeft;
+    private float dashCooldownLeft;
+    private Vector3 dashDir;
 
     void Start()
     {
@@ -47,11 +52,6 @@ public class PlayerMovement1 : MonoBehaviour
             );
         }
 
-        // Handle jump input (space)
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        {
-            jumpRequested = true;
-        }
     }
 
     void FixedUpdate()
@@ -68,46 +68,7 @@ public class PlayerMovement1 : MonoBehaviour
         worldMove.y = rb.velocity.y; // keep current vertical velocity
         rb.velocity = worldMove;
 
-        // apply jump
-        if (jumpRequested)
-        {
-            jumpRequested = false;
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
 
-        ApplyBetterGravity();
     }
 
-    void ApplyBetterGravity()
-    {
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
-        }
-        // Optional: if going up but jump key is released, apply extra gravity for short hop
-        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
-        }
-    }
-
-    bool IsGrounded()
-    {
-        // Simple ground check using a downward SphereCast
-        // Adjust groundCheckDistance and radius if needed
-
-        /*
-        float radius = 0.2f;
-        return Physics.SphereCast(
-            transform.position,
-            radius,
-            Vector3.down,
-            out RaycastHit hit,
-            groundCheckDistance,
-            groundMask
-        );
-        */
-
-        return true;
-    }
 }
