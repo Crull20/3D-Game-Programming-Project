@@ -1343,7 +1343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719938652}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.49073854, y: 0.000000014992038, z: -0.000000008443834, w: 0.8713069}
+  m_LocalRotation: {x: 0.49073854, y: -0.000000014992038, z: 0.000000008443834, w: 0.8713069}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1399,6 +1399,7 @@ GameObject:
   - component: {fileID: 1834914288}
   - component: {fileID: 1834914290}
   - component: {fileID: 1834914289}
+  - component: {fileID: 1834914291}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -1568,6 +1569,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1834914291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834914283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98cf1a727c4b36647946a45fcc60db21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 1287670376}
+  attackRadius: 1.2
+  attackRangeForward: 1.2
+  damage: 25
+  attackCooldown: 0.2
+  slashVfxPrefab: {fileID: 4460031816686032750, guid: fccf9463a7c4d304e95452b7314c0b44, type: 3}
+  forwardOffset: 1.2
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &1955682338
 PrefabInstance:
   m_ObjectHideFlags: 0
