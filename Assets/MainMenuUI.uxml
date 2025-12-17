@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/ButtonStyle.uss?fileID=7433441132597879392&amp;guid=bf5068b755dfd47bba627126861fbbdc&amp;type=3#ButtonStyle" />
-    <ui:VisualElement name="BackgroundImage" style="flex-grow: 1; justify-content: center; flex-basis: 20%; align-items: center; padding-left: 15%; padding-right: 15%; background-image: url(&apos;project://database/Assets/UI%20and%20Main%20Menu/BackGroundImage.png?fileID=2800000&amp;guid=4964b120bc4aa45b6b2a005901aeeed0&amp;type=3#BackGroundImage&apos;); -unity-background-scale-mode: stretch-to-fill; align-self: stretch; flex-direction: column; margin-top: 0; margin-bottom: 0;">
-        <ui:Button text="START&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button" style="text-overflow: ellipsis; -unity-text-align: middle-center; white-space: nowrap;" />
-        <ui:Button text="QUIT" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button" style="text-overflow: clip;" />
-    </ui:VisualElement>
-</ui:UXML>
