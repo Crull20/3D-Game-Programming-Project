@@ -42,11 +42,15 @@ public class PlayerMovement1 : MonoBehaviour
 
         Vector3 camForward = cam.forward;
         camForward.y = 0f;
-        Vector3 camRight = cam.right;
-        camRight.y = 0f;
-        camRight.Normalize();
-
-        inputDir = (camForward * v + camRight * h).normalized;
+        if (camForward.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(camForward);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRot,
+                rotationSpeed * Time.deltaTime
+            );
+        }
 
     }
 
