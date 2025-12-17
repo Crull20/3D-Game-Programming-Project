@@ -59,7 +59,7 @@ public class MeleeAttack : MonoBehaviour
         GameObject slash = Instantiate(slashVfxPrefab, pos, rot);
 
         var sr = slash.GetComponentInChildren<SpriteRenderer>();
-        if (sr != null) sr.flipX = flipX;
+        // if (sr != null) sr.flipX = flipX;
     }
 
     public void DoDamage()
