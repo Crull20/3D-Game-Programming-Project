@@ -34,7 +34,7 @@ public class UIMainMenu : MonoBehaviour
         yield return Fade(GameStartFade, 0f, 1f, shotFadeIn);          // C
 
         // Now you're fully covered by the screenshot, so the cut is hidden:
-        SceneManager.LoadScene("yur");
+        SceneManager.LoadScene("Level1");
     }
 
     private IEnumerator Fade(VisualElement el, float from, float to, float duration)
