@@ -126,4 +126,11 @@ public class PlayerMovement1 : MonoBehaviour
         );
     }
 
+    public float GetDashCooldownFill01()
+    {
+        if (dashCooldown <= 0f) return 1f;
+
+        return 1f - Mathf.Clamp01(dashCooldownLeft / dashCooldown);
+    }
+
 }

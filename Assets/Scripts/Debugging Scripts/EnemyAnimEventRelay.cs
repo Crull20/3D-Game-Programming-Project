@@ -12,7 +12,7 @@ public class EnemyAnimEventRelay : MonoBehaviour
         melee = GetComponentInParent<EnemyMeleeAttack>();
     }
 
-    // These names MUST match your Animation Events exactly
+    // must match exactly
     public void DoHitNow() => melee?.DoHitNow();
     public void EndAttack() => melee?.EndAttack();
 }
