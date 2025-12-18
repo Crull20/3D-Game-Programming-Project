@@ -16,6 +16,10 @@ public class SpriteDirectionAnimator : MonoBehaviour
     private enum Facing { Front, Back, Left, Right }
     private Facing lastFacing = Facing.Back; // default when game starts
 
+    // deadzone to counter jitters
+    [Header("Facing")]
+    public float sideBias = 1.25f; // >1 means needs to be 25% stronger to count left/right
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -62,7 +66,7 @@ public class SpriteDirectionAnimator : MonoBehaviour
             float rightAmount = Vector3.Dot(vel, camRight);
 
             // decide whether movement is more left/right or forward/back
-            if (Mathf.Abs(rightAmount) > Mathf.Abs(forwardAmount))
+            if (Mathf.Abs(rightAmount) > Mathf.Abs(forwardAmount) * sideBias)
             {
                 // mostly horizontal relative to camera
                 facing = rightAmount > 0f ? Facing.Right : Facing.Left;

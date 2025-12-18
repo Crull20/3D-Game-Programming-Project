@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4896909448743498799}
   - component: {fileID: 1045490282774951357}
   - component: {fileID: 2305249192198612013}
+  - component: {fileID: 4717712865504885357}
+  - component: {fileID: 2878629087246393271}
   m_Layer: 6
   m_Name: EnemyObject
   m_TagString: Untagged
@@ -98,6 +100,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockYOnly: 1
+--- !u!95 &4717712865504885357
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687953864297041715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ba2cdbd2a810d34ba00a664d9b0ae40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2878629087246393271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687953864297041715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d914f74f531d0d44b984a432a4743b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2961590083810808421
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +148,7 @@ GameObject:
   - component: {fileID: 8785998894929558227}
   - component: {fileID: 1337542063723401977}
   - component: {fileID: 4877491027945473319}
+  - component: {fileID: 2962717125399847205}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -155,10 +191,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.1902341
-  m_Height: 3.665707
+  m_Radius: 1.5297191
+  m_Height: 4.109329
   m_Direction: 1
-  m_Center: {x: -0.08560109, y: 0.21905017, z: -0.4184674}
+  m_Center: {x: -0.059788465, y: 0.37358427, z: 0.005375862}
 --- !u!54 &2191293860356432007
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -242,9 +278,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2065cb01685da499b316697c0d2521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
   attackRadius: 4
-  attackCooldown: 1
+  damage: 2
+  attackCooldown: 2
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &2962717125399847205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2961590083810808421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c27928678546e6468a97cae3caa6cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4717712865504885357}
+  moveThreshold: 0.05
