@@ -62,6 +62,11 @@ public class EnemyMeleeAttack : MonoBehaviour
             if (dmg == null) continue;
 
             dmg.TakeDamage(damage);
+
+            // knockback + red flash
+            var reaction = c.GetComponentInParent<PlayerHitReaction>();
+            reaction?.ApplyHit(transform.position);
+
             return; // only hit once
         }
     }

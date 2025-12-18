@@ -71,6 +71,10 @@ public class PlayerMovement1 : MonoBehaviour
 
     void FixedUpdate()
     {
+        var hit = GetComponent<PlayerHitReaction>();
+        if (hit != null && hit.IsKnockbackActive())
+            return;
+
         // Sprint if shift is held
         float currentSpeed = moveSpeed;
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
