@@ -20,6 +20,9 @@ public class SpriteDirectionAnimator : MonoBehaviour
     [Header("Facing")]
     public float sideBias = 1.25f; // >1 means needs to be 25% stronger to count left/right
 
+    [Header("Roll")]
+    private bool rollLocked;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -35,6 +38,9 @@ public class SpriteDirectionAnimator : MonoBehaviour
 
     private void Update()
     {
+
+        if (rollLocked) return;
+
         if (rb == null) return;
 
         // grab camera if it appears later
@@ -102,6 +108,56 @@ public class SpriteDirectionAnimator : MonoBehaviour
 
         // fallback
         return "IdleBack";
-    } 
-        
+    }
+
+    public void PlayRoll(Vector3 worldDir)
+    {
+        if (cam == null && Camera.main != null) cam = Camera.main.transform;
+        if (cam == null) return;
+
+        // decide facing from roll direction
+        Vector3 d = worldDir;
+        d.y = 0f;
+        if (d.sqrMagnitude < 0.0001f) d = transform.forward;
+        d.Normalize();
+
+        Vector3 camForward = cam.forward; camForward.y = 0f; camForward.Normalize();
+        Vector3 camRight = cam.right; camRight.y = 0f; camRight.Normalize();
+
+        float forwardAmount = Vector3.Dot(d, camForward);
+        float rightAmount = Vector3.Dot(d, camRight);
+
+        float absF = Mathf.Abs(forwardAmount);
+        float absR = Mathf.Abs(rightAmount);
+
+        Facing facing;
+        // choose lef/right if more sideways than for/back
+        if (absR > absF * sideBias)
+            facing = rightAmount > 0f ? Facing.Right : Facing.Left;
+        else
+            facing = forwardAmount > 0f ? Facing.Back : Facing.Front;
+
+        lastFacing = facing;
+
+        string rollState = facing switch
+        {
+            Facing.Front => "RollFront",
+            Facing.Back => "RollBack",
+            Facing.Left => "RollLeft",
+            Facing.Right => "RollRight",
+            _ => "RollBack"
+        };
+
+        rollLocked = true;
+        anim.Play(rollState);
+        currentState = rollState;
+
+        Debug.Log("PlayRoll: " + rollState);
+    }
+
+    public void EndRoll()
+    {
+        rollLocked = false;
+    }
+
 }

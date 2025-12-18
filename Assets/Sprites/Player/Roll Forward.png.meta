@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7eec20031b40b51448bca9032ee1fb1b
+guid: 1d6c5e117e8c64a4faf84428766c3555
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,96 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_0
+      name: Roll Forward_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2b56d1a2e50ce84c86ef62734624ef4
-      internalID: -1268172085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 936979535e762cf45a140c2fe91c94c5
-      internalID: 181236479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd8fa2f17ab2ed549996d21b0ee2f9a4
-      internalID: -1533472514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 858ce5412651da6468c8b94687a50e50
-      internalID: 1778242492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 16
+        x: 0
         y: 112
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -221,19 +137,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71f4d1a1c94870a4c86a086902c05ecb
-      internalID: -106347077
+      spriteID: 2dc8783a2076d494da744550770c46b6
+      internalID: 1366952470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_5
+      name: Roll Forward_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5533aab0faa9e440b190bab2a9741e6
+      internalID: -2065684951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roll Forward_2
       rect:
         serializedVersion: 2
         x: 64
         y: 112
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -242,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75448a01e69e6454e803f84f0ef74507
-      internalID: 1253101027
+      spriteID: 9b2ef05fcf6464e48857bc52ae683942
+      internalID: -1875789181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_6
+      name: Roll Forward_3
       rect:
         serializedVersion: 2
-        x: 112
+        x: 96
         y: 112
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -263,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08e8cad8b328c7a4f8114f266afd3cdc
-      internalID: -530148330
+      spriteID: 755f4b67cb064e048b18a5e84d7c50a9
+      internalID: -118573213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_7
+      name: Roll Forward_4
       rect:
         serializedVersion: 2
-        x: 160
-        y: 112
-        width: 16
+        x: 0
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -284,19 +221,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfdb8601cbd2a5f4dba99c3430220c75
-      internalID: -1824325846
+      spriteID: 04af0d8afa4954d45b1b3c3d70fe928c
+      internalID: -1324779751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_8
+      name: Roll Forward_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
-        width: 16
+        x: 32
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -305,19 +242,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1de62dd7f466444196581323a112b00
-      internalID: -359854891
+      spriteID: 487b90ee6d5063341932972da7e845d5
+      internalID: 2095370645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_9
+      name: Roll Forward_6
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
-        width: 16
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -326,19 +263,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edce2f7bad730f947814e0095c7ecf4a
-      internalID: 375057706
+      spriteID: e877226c196dd6f4bb81f178b1f91cc9
+      internalID: 816808283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_10
+      name: Roll Forward_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 64
-        width: 16
+        x: 96
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -347,19 +284,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 359e124d19e91c94d88aa2441001cd78
-      internalID: 1920521862
+      spriteID: 7049122a6570dcb47a9b28ce796efcc2
+      internalID: 22050081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_11
+      name: Roll Forward_8
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 16
+        x: 0
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -368,19 +305,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 859f94f63092b924f9872c6b94cc402f
-      internalID: 2061139945
+      spriteID: e62f789d0574555488e311902a87dd96
+      internalID: 780553068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_12
+      name: Roll Forward_9
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
+        x: 32
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -389,19 +326,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9eccf5527ec4b5408883b5328484b0c
-      internalID: -1159240030
+      spriteID: 414bce00ebeebd046a9560ab58f65702
+      internalID: 1326962497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_13
+      name: Roll Forward_10
       rect:
         serializedVersion: 2
         x: 64
-        y: 16
-        width: 16
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -410,50 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0edaa3186c4ba64496e568d81e38c76
-      internalID: -1852352334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1100f2850c7f5d64b86da33adeb9e272
-      internalID: -2027715929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b23d2a9e6591544fb661e1731644d16
-      internalID: 1409300426
+      spriteID: 5bae689f8da231a408213f370c9ea82f
+      internalID: -212153839
       vertices: []
       indices: 
       edges: []
@@ -461,7 +356,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ebdae48b9e7f7f44ab91b6419fcbe026
     internalID: 0
     vertices: []
     indices: 
@@ -469,22 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basic Charakter Spritesheet_0: -1268172085
-      Basic Charakter Spritesheet_1: 181236479
-      Basic Charakter Spritesheet_10: 1920521862
-      Basic Charakter Spritesheet_11: 2061139945
-      Basic Charakter Spritesheet_12: -1159240030
-      Basic Charakter Spritesheet_13: -1852352334
-      Basic Charakter Spritesheet_14: -2027715929
-      Basic Charakter Spritesheet_15: 1409300426
-      Basic Charakter Spritesheet_2: -1533472514
-      Basic Charakter Spritesheet_3: 1778242492
-      Basic Charakter Spritesheet_4: -106347077
-      Basic Charakter Spritesheet_5: 1253101027
-      Basic Charakter Spritesheet_6: -530148330
-      Basic Charakter Spritesheet_7: -1824325846
-      Basic Charakter Spritesheet_8: -359854891
-      Basic Charakter Spritesheet_9: 375057706
+      Roll Forward_0: 1366952470
+      Roll Forward_1: -2065684951
+      Roll Forward_10: -212153839
+      Roll Forward_2: -1875789181
+      Roll Forward_3: -118573213
+      Roll Forward_4: -1324779751
+      Roll Forward_5: 2095370645
+      Roll Forward_6: 816808283
+      Roll Forward_7: 22050081
+      Roll Forward_8: 780553068
+      Roll Forward_9: 1326962497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

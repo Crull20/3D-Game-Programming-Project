@@ -5664,8 +5664,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   groundCheckRadius: 0.25
-  dashSpeed: 20
-  dashDuration: 0.1
+  dashSpeed: 10
+  dashDuration: 0.5
   dashCooldown: 0.8
 --- !u!136 &1834914289
 CapsuleCollider:

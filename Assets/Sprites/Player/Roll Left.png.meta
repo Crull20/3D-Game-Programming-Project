@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7eec20031b40b51448bca9032ee1fb1b
+guid: 39095b6da229ae94f8bbab9411383f78
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,96 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_0
+      name: Roll Left_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2b56d1a2e50ce84c86ef62734624ef4
-      internalID: -1268172085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 936979535e762cf45a140c2fe91c94c5
-      internalID: 181236479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd8fa2f17ab2ed549996d21b0ee2f9a4
-      internalID: -1533472514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 858ce5412651da6468c8b94687a50e50
-      internalID: 1778242492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 16
+        x: 0
         y: 112
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -221,19 +137,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71f4d1a1c94870a4c86a086902c05ecb
-      internalID: -106347077
+      spriteID: a31a450460f94804e9ed05c66dffa3ea
+      internalID: -1321398428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_5
+      name: Roll Left_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94faa7fec4d1be428a1df8db47b7e5e
+      internalID: 1131626473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roll Left_2
       rect:
         serializedVersion: 2
         x: 64
         y: 112
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -242,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75448a01e69e6454e803f84f0ef74507
-      internalID: 1253101027
+      spriteID: f9ff8d3c3e30a324e9bd36cc24fcc58d
+      internalID: -619854828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_6
+      name: Roll Left_3
       rect:
         serializedVersion: 2
-        x: 112
+        x: 96
         y: 112
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -263,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08e8cad8b328c7a4f8114f266afd3cdc
-      internalID: -530148330
+      spriteID: 3d7b609e31636ee4499dfef9c912bdbe
+      internalID: 1965501660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_7
+      name: Roll Left_4
       rect:
         serializedVersion: 2
-        x: 160
-        y: 112
-        width: 16
+        x: 0
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -284,19 +221,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfdb8601cbd2a5f4dba99c3430220c75
-      internalID: -1824325846
+      spriteID: ca225bc86a954c44d8fbf63a8d1ff1c2
+      internalID: -1760154101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_8
+      name: Roll Left_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
-        width: 16
+        x: 32
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -305,19 +242,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1de62dd7f466444196581323a112b00
-      internalID: -359854891
+      spriteID: d409505c92cbeca4399e5f5f990abf35
+      internalID: 1739044526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_9
+      name: Roll Left_6
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
-        width: 16
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -326,19 +263,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edce2f7bad730f947814e0095c7ecf4a
-      internalID: 375057706
+      spriteID: 0a83b2eb11d2d9640b26348f8b29718f
+      internalID: 1133516753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_10
+      name: Roll Left_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 64
-        width: 16
+        x: 96
+        y: 80
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -347,19 +284,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 359e124d19e91c94d88aa2441001cd78
-      internalID: 1920521862
+      spriteID: df723a68e5c34b54bb85215908915812
+      internalID: -684020640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_11
+      name: Roll Left_8
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 16
+        x: 0
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -368,19 +305,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 859f94f63092b924f9872c6b94cc402f
-      internalID: 2061139945
+      spriteID: bbec6bc8b7d09e3468bf00d9e4c105be
+      internalID: -1178668348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_12
+      name: Roll Left_9
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
+        x: 32
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -389,19 +326,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9eccf5527ec4b5408883b5328484b0c
-      internalID: -1159240030
+      spriteID: 01c193e6b54374c4490f5ceb5411cfce
+      internalID: 835085722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_13
+      name: Roll Left_10
       rect:
         serializedVersion: 2
         x: 64
-        y: 16
-        width: 16
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -410,19 +347,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0edaa3186c4ba64496e568d81e38c76
-      internalID: -1852352334
+      spriteID: a915001292298bc46b02a792f34f2e0a
+      internalID: 1264829002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Charakter Spritesheet_14
+      name: Roll Left_11
       rect:
         serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
+        x: 96
+        y: 48
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -431,29 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1100f2850c7f5d64b86da33adeb9e272
-      internalID: -2027715929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Charakter Spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b23d2a9e6591544fb661e1731644d16
-      internalID: 1409300426
+      spriteID: e77530dea1b671941ab88e460dab12d2
+      internalID: 990645081
       vertices: []
       indices: 
       edges: []
@@ -461,7 +377,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 3b1a1ab36945a8b40876d2f147c52910
     internalID: 0
     vertices: []
     indices: 
@@ -469,22 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basic Charakter Spritesheet_0: -1268172085
-      Basic Charakter Spritesheet_1: 181236479
-      Basic Charakter Spritesheet_10: 1920521862
-      Basic Charakter Spritesheet_11: 2061139945
-      Basic Charakter Spritesheet_12: -1159240030
-      Basic Charakter Spritesheet_13: -1852352334
-      Basic Charakter Spritesheet_14: -2027715929
-      Basic Charakter Spritesheet_15: 1409300426
-      Basic Charakter Spritesheet_2: -1533472514
-      Basic Charakter Spritesheet_3: 1778242492
-      Basic Charakter Spritesheet_4: -106347077
-      Basic Charakter Spritesheet_5: 1253101027
-      Basic Charakter Spritesheet_6: -530148330
-      Basic Charakter Spritesheet_7: -1824325846
-      Basic Charakter Spritesheet_8: -359854891
-      Basic Charakter Spritesheet_9: 375057706
+      Roll Left_0: -1321398428
+      Roll Left_1: 1131626473
+      Roll Left_10: 1264829002
+      Roll Left_11: 990645081
+      Roll Left_2: -619854828
+      Roll Left_3: 1965501660
+      Roll Left_4: -1760154101
+      Roll Left_5: 1739044526
+      Roll Left_6: 1133516753
+      Roll Left_7: -684020640
+      Roll Left_8: -1178668348
+      Roll Left_9: 835085722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

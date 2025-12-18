@@ -65,6 +65,10 @@ public class PlayerMovement1 : MonoBehaviour
             isDashing = true;
             dashTimeLeft = dashDuration;
             dashCooldownLeft = dashCooldown;
+
+            var dirAnim = GetComponentInChildren<SpriteDirectionAnimator>();
+            if (dirAnim != null)
+                dirAnim.PlayRoll(dashDir);
         }
 
     }
@@ -91,7 +95,13 @@ public class PlayerMovement1 : MonoBehaviour
 
             dashTimeLeft -= Time.fixedDeltaTime;
             if (dashTimeLeft <= 0f)
+            {
                 isDashing = false;
+
+                var dirAnim = GetComponentInChildren<SpriteDirectionAnimator>();
+                if (dirAnim != null)
+                    dirAnim.EndRoll();
+            }
 
             return;                 // skip normal movement while dashing
         }

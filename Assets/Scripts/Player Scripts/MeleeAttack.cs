@@ -83,7 +83,7 @@ public class MeleeAttack : MonoBehaviour
         if (slashVfxPrefab == null || attackPoint == null) return;
 
         Vector3 pos = attackPoint.position + dir * forwardOffset;
-        Quaternion rot = Quaternion.LookRotation(dir, Vector3.up) * Quaternion.Euler(75f, 0f, 150f);
+        Quaternion rot = Quaternion.LookRotation(dir, Vector3.up) * Quaternion.Euler(45f, 0f, 150f);
 
         GameObject slash = Instantiate(slashVfxPrefab, pos, rot);
 
