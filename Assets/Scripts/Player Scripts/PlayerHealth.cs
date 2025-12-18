@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Vector3 hitFrom)
     {
         if (invincible || !canTakeDamage) return;
 

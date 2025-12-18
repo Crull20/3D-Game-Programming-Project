@@ -104,7 +104,7 @@ public class MeleeAttack : MonoBehaviour
             hitThisSwing.Add(c);
 
             IDamageable dmg = c.GetComponentInParent<IDamageable>();
-            if (dmg != null) dmg.TakeDamage(damage);
+            if (dmg != null) dmg.TakeDamage(damage, transform.position);
         }
     }
 
@@ -124,9 +124,4 @@ public class MeleeAttack : MonoBehaviour
         Vector3 center = attackPoint.position + dir * attackRangeForward;
         Gizmos.DrawWireSphere(center, attackRadius);
     }
-}
-
-public interface IDamageable
-{
-    void TakeDamage(int amount);
 }

@@ -12,10 +12,14 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Vector3 hitFrom)
     {
+
         currentHealth -= amount;
         Debug.Log($"{name} took {amount} damage. HP: {currentHealth}");
+
+        var reaction = GetComponent<EnemyHitReaction>();
+        reaction?.ApplyHit(hitFrom);
 
         if (currentHealth <= 0)
             Die();
@@ -26,4 +30,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         // replace with death animation later
         Destroy(gameObject);
     }
+
+
 }

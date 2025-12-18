@@ -38,8 +38,20 @@ public class EnemySpawner : MonoBehaviour
 
         // optional: raycast to ground if you have terrain
         if (Physics.Raycast(pos + Vector3.up * 50f, Vector3.down, out RaycastHit hit, 200f))
+        {
             pos.y = hit.point.y;
 
-        return pos;
+            // Adjust so capsule bottom sits on ground
+            var cap = enemyPrefab.GetComponent<CapsuleCollider>();
+            if (cap != null && cap.direction == 1) // 1 = Y axis
+            {
+                float half = cap.height * 0.5f;
+                float bottomOffset = half - cap.radius; // from center to bottom hemisphere
+                pos.y += bottomOffset - cap.center.y;
+            }
+
+        }
+
+            return pos;
     }
 }

@@ -18,6 +18,10 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
+        var hit = GetComponent<EnemyHitReaction>();
+        if (hit != null && hit.IsKnockbackActive())
+            return;
+
         if (target == null) return;
 
         // Move on ground plane (XZ)

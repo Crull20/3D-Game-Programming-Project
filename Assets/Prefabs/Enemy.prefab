@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6626374860469688002}
@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 1337542063723401977}
   - component: {fileID: 4877491027945473319}
   - component: {fileID: 2962717125399847205}
+  - component: {fileID: -4860958143814671950}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -191,10 +192,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5297191
-  m_Height: 4.109329
+  m_Radius: 1.162824
+  m_Height: 3.8174546
   m_Direction: 1
-  m_Center: {x: -0.059788465, y: 0.37358427, z: 0.005375862}
+  m_Center: {x: -0.018612742, y: -0.17731416, z: 0.04601717}
 --- !u!54 &2191293860356432007
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -248,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 4
   stopDistance: 1.46
   turnSpeed: 12
 --- !u!114 &1337542063723401977
@@ -298,3 +299,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4717712865504885357}
   moveThreshold: 0.05
+--- !u!114 &-4860958143814671950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2961590083810808421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada52a0fa7849a54ab60c5797b813830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 8
+  knockbackTime: 0.12
+  spriteRenderer: {fileID: 1045490282774951357}
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  flashTime: 0.1
