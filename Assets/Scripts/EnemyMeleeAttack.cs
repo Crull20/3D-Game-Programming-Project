@@ -5,52 +5,68 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyAI))]
 public class EnemyMeleeAttack : MonoBehaviour
 {
+    [Header("Damage")]
     public int damage = 10;
+
+    [Header("Attack")]
     public float attackRadius = 1.1f;
     public float attackCooldown = 1.0f;
-
     public LayerMask playerLayer;
 
-    EnemyAI ai;
-    float nextAttackTime;
+    private EnemyAI ai;
+    private float nextAttackTime;
 
     private void Awake()
     {
         ai = GetComponent<EnemyAI>();
+        nextAttackTime = 0f;
     }
 
     private void Update()
     {
         if (ai == null || ai.target == null) return;
-        if (Time.time < nextAttackTime) return;
 
-        // attack when close enough to target
-        float dist = Vector3.Distance(transform.position, ai.target.position);
-        if (dist > ai.stopDistance + 0.2f) return;
+        // flat distance so height doesnt prevent attack
+        Vector3 a = transform.position; a.y = 0f;
+        Vector3 b = ai.target.position; b.y = 0f;
+        float dist = Vector3.Distance(a, b);
+
+        if (dist > attackRadius) return;
+        if (Time.time < nextAttackTime) return;
 
         TryHitPlayer();
     }
 
     void TryHitPlayer()
     {
-        // center hit forward from enemy
-        Vector3 center = transform.position + transform.forward * 0.6f;
+        // center overlap at target
+        Vector3 center = ai.target.position;
 
-        Collider[] hits = Physics.OverlapSphere(center, attackRadius, playerLayer, QueryTriggerInteraction.Ignore);
+        // hurtbox is trigger so use collide
+        Collider[] hits = Physics.OverlapSphere(center, attackRadius, playerLayer, QueryTriggerInteraction.Collide);
+
         foreach (var c in hits)
         {
             IDamageable dmg = c.GetComponentInParent<IDamageable>();
-            if (dmg != null)
+            if (dmg == null) continue;
+
+            var playerHealth = c.GetComponentInParent<PlayerHealth>();
+            if (playerHealth != null)
             {
-                dmg.TakeDamage(damage);
-                nextAttackTime = Time.time + attackCooldown;
-                break;
+                Debug.Log($"[EnemyAttack] Hit for {damage}. Player HP before: {playerHealth.currentHealth}/{playerHealth.maxHealth}");
             }
+
+            dmg.TakeDamage(damage);
+            nextAttackTime = Time.time + Mathf.Max(attackCooldown, 0.05f);
+            return;
         }
+
+        // nothing valid hit don't start cooldown
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position + transform.forward * 0.6f, attackRadius);
+        if (ai != null && ai.target != null)
+            Gizmos.DrawWireSphere(ai.target.position, attackRadius);
     }
 }
