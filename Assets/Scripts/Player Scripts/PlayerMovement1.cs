@@ -63,6 +63,7 @@ public class PlayerMovement1 : MonoBehaviour
             dashDir = (inputDir.sqrMagnitude > 0.001f) ? inputDir : transform.forward;
 
             isDashing = true;
+            AudioManager.I?.Play2D(AudioManager.I.playerRoll, 0.9f);
             dashTimeLeft = dashDuration;
             dashCooldownLeft = dashCooldown;
 
