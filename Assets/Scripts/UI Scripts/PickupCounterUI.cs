@@ -29,6 +29,6 @@ public class PickupCounter : MonoBehaviour
     private void UpdateUI()
     {
         if (counterText != null)
-            counterText.text = $"Map Peices {current}/{totalPickups}";
+            counterText.text = $"Map Pieces {current}/{totalPickups}";
     }
 }
