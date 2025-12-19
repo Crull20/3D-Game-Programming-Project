@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1150244030}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 70
     OrthographicSize: 10
@@ -1527,14 +1527,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1150244030
-Transform:
+--- !u!224 &1150244030
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150244029}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1542,6 +1541,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1369471749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1191340732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,19 +1696,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8911822813780508848, guid: 62d49f57fae7fdb46bb0cb73e3ba4d79, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9977488
       objectReference: {fileID: 0}
     - target: {fileID: 8911822813780508848, guid: 62d49f57fae7fdb46bb0cb73e3ba4d79, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.06579123
       objectReference: {fileID: 0}
     - target: {fileID: 8911822813780508848, guid: 62d49f57fae7fdb46bb0cb73e3ba4d79, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.01296854
       objectReference: {fileID: 0}
     - target: {fileID: 8911822813780508848, guid: 62d49f57fae7fdb46bb0cb73e3ba4d79, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.0008551413
       objectReference: {fileID: 0}
     - target: {fileID: 8911822813780508848, guid: 62d49f57fae7fdb46bb0cb73e3ba4d79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1946,7 +1950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdfe7bac3f2b98458f6d1ae6b179169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 1150244030}
+  followTarget: {fileID: 0}
   localOffset: {x: 0.3, y: 0.2, z: 0.7}
   yawSensitivity: 250
   pitchSensitivity: 180
@@ -1967,7 +1971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vcam: {fileID: 888905758}
-  lookAtTarget: {fileID: 1150244030}
+  lookAtTarget: {fileID: 0}
   yawSensitivity: 250
   pitchSensitivity: 180
   invertX: 0

@@ -1,8 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(0, 0, 0); height: 448px;">
-        <ui:Label tabindex="-1" text="DIED" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-items: center; position: absolute; top: -5px; left: 60px; width: 117px; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 44px;" />
-        <ui:Button text="Retry" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RetryButton" style="align-self: center; position: absolute; top: 64px; left: 70px; -unity-text-outline-color: rgba(0, 0, 0, 0); background-color: rgb(238, 241, 126); height: 20px; width: 82px;" />
-        <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenuButton" style="align-items: center; justify-content: space-around; align-self: center; position: absolute; top: 88px; left: 70px; height: 20px; width: 80px;" />
-        <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" style="align-self: center; justify-content: space-around; align-items: auto; position: absolute; top: 113px; left: 69px; width: 82px; height: 22px;" />
+        <ui:Label tabindex="-1" text="YOU DIED" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-items: center; position: absolute; top: 102px; left: 169px; width: 235px; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 44px;" />
+        <ui:Button text="Retry" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RetryButton" style="align-self: center; position: absolute; top: 171px; left: 236px; -unity-text-outline-color: rgba(0, 0, 0, 0); background-color: rgb(238, 241, 126); height: 20px; width: 82px;" />
+        <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenuButton" style="align-items: center; justify-content: space-around; align-self: center; position: absolute; top: 199px; left: 236px; height: 24px; width: 82px;" />
+        <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" style="align-self: center; justify-content: space-around; align-items: auto; position: absolute; top: 229px; left: 236px; width: 82px; height: 22px;" />
     </ui:VisualElement>
 </ui:UXML>

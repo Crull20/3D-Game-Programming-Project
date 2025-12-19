@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickupCounter : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PickupCounter : MonoBehaviour
     public void AddPickup(int amount = 1)
     {
         current += amount;
-        if (current > totalPickups) current = totalPickups;
+        if (current >= totalPickups) SceneManager.LoadScene("WinScene");
         UpdateUI();
     }
 
