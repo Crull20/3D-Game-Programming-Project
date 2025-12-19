@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class DeathScreenUI : MonoBehaviour
 {
     [Header("Scene name to load for Main Menu")]
-    [SerializeField] private string mainMenuSceneName = "MainMenu";
+    [SerializeField] private string mainMenuSceneName = "UI & Main Menu";
     [SerializeField] private string Level1Name = "Level1";
 
     [Header("Optional: if you want to show/hide the whole overlay by name")]

@@ -2256,6 +2256,7 @@ GameObject:
   - component: {fileID: 1834914291}
   - component: {fileID: 1834914292}
   - component: {fileID: 1834914293}
+  - component: {fileID: 1834914294}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -2491,6 +2492,19 @@ MonoBehaviour:
   spriteRenderer: {fileID: 836340924}
   hitColor: {r: 0.6981132, g: 0.09549664, b: 0.09549664, a: 1}
   flashTime: 0.2
+--- !u!114 &1834914294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834914283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c4cc3911d8d4b3fa478b946b6c29ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSceneName: DeathScene
 --- !u!1001 &1883475111
 PrefabInstance:
   m_ObjectHideFlags: 0
