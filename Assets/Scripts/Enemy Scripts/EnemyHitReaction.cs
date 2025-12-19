@@ -27,6 +27,7 @@ public class EnemyHitReaction : MonoBehaviour
 
     public void ApplyHit(Vector3 fromPosition)
     {
+        AudioManager.I?.Play3D(AudioManager.I.enemyInjured, transform.position, 1f);
         Vector3 dir = transform.position - fromPosition;
         dir.y = 0f;
         if (dir.sqrMagnitude < 0.001f)

@@ -50,6 +50,8 @@ public class MeleeAttack : MonoBehaviour
 
         SpawnSlash(dir, flipX);
 
+        AudioManager.I?.Play2D(AudioManager.I.playerSlash, 0.9f);
+
         yield return new WaitForSeconds(0.15f);
         DoDamage(dir);
 

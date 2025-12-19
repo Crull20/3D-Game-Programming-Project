@@ -27,6 +27,8 @@ public class PlayerHitReaction : MonoBehaviour
 
     public void ApplyHit(Vector3 fromPosition)
     {
+
+        AudioManager.I?.Play2D(AudioManager.I.playerHit, 1f);
         // direction away from enemy (horizontal only)
         Vector3 dir = transform.position - fromPosition;
         dir.y = 0f;
